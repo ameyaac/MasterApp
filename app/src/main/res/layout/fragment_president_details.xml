@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PresidentDetails"
+    android:background="@drawable/fragment_border"
+    android:id="@+id/fragment_prezDetails">
+
+    <!-- TODO: Update blank fragment layout -->
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/prezImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:src="@tools:sample/avatars"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:background="@drawable/selena"/>
+
+        <TextView
+            android:id="@+id/prezName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Name"
+            app:layout_constraintTop_toBottomOf="@id/prezImage"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <TextView
+            android:id="@+id/prezPeriod"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Period"
+            app:layout_constraintTop_toBottomOf="@id/prezName"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <TextView
+            android:id="@+id/prezQualification"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Qualifications"
+            app:layout_constraintTop_toBottomOf="@id/prezPeriod"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <TextView
+            android:id="@+id/prezExperience"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Experience"
+            app:layout_constraintTop_toBottomOf="@id/prezQualification"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <TextView
+            android:id="@+id/prezLifetime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Lifetime"
+            app:layout_constraintTop_toBottomOf="@id/prezExperience"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <TextView
+            android:id="@+id/prezAchievements"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Acievements"
+            app:layout_constraintTop_toBottomOf="@id/prezLifetime"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>

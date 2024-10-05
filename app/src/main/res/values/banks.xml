@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="bank_names">
+        <item>--SELECT--</item>
+        <item>HDFC Bank</item>
+        <item>ICICI Bank</item>
+        <item>State Bank of India</item>
+        <item>Axis Bank</item>
+        <item>Kotak Mahindra Bank</item>
+        <item>Punjab National Bank</item>
+        <item>Indian Overseas Bank</item>
+        <item>Indusland Bank</item>
+        <item>Union Bank</item>
+    </string-array>
+</resources>

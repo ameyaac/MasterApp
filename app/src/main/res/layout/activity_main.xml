@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="64dp"
+        android:text="@string/homePageTitle"
+        android:textSize="34sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ScrollView
+        android:layout_width="300dp"
+        android:layout_height="500dp"
+        android:layout_marginTop="96dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/btn_welcome"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/helloWorld" />
+
+            <Button
+                android:id="@+id/btn_toast"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/toast" />
+
+            <Button
+                android:id="@+id/btn_lifeCycle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/lifeCycleLog" />
+
+            <Button
+                android:id="@+id/btn_sum"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/sum" />
+
+            <Button
+                android:id="@+id/btn_form"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/form" />
+
+            <Button
+                android:id="@+id/btn_calc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/calc" />
+
+            <Button
+                android:id="@+id/btn_intent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/intent" />
+
+            <Button
+                android:id="@+id/btn_custToast"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/custToast" />
+
+            <Button
+                android:id="@+id/btn_menu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/menu" />
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

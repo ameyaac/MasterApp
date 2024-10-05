@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">MasterApp</string>
+    <string name="homePageTitle">Home Page</string>
+    <string name="helloWorld">Hello World</string>
+    <string name="toast">Toast</string>
+    <string name="lifeCycleLog">Life Cycle Log</string>
+    <string name="sum">Sum</string>
+    <string name="number1">Number 1</string>
+    <string name="number2">Number 2</string>
+    <string name="ADD">ADD</string>
+    <string name="RESET">RESET</string>
+    <string name="RESULT">RESULT</string>
+    <string name="form">Form</string>
+    <string name="calc">Calculator</string>
+    <string name="intent">Intent</string>
+    <string name="custToast">Custom Toast</string>
+    <string name="menu">Menu</string>
+    <string name="exit">Exit</string>
+    <string name="president">President</string>
+
+    <string-array name="president_names">
+        <item>Dr. Rajendra Prasad</item>
+        <item>Dr. Sarvepalli Radhakrishnan</item>
+        <item>Dr. Zakir Husain</item>
+    </string-array>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
