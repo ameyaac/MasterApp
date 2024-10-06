@@ -18,9 +18,10 @@ public class IntentDisplay extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_intent_display);
+
         ActionBar actionBar = getSupportActionBar();
         assert actionBar != null;
-        actionBar.setTitle("Intent");
+        actionBar.setTitle("Intent Display");
 
         Intent display = getIntent();
         String msg_r = display.getStringExtra("text");

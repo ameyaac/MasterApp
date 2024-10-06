@@ -10,6 +10,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 import android.widget.ToggleButton;
 
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class IntentMain extends AppCompatActivity {
@@ -23,6 +24,10 @@ public class IntentMain extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_intent_main);
+
+        ActionBar actionBar = getSupportActionBar();
+        assert actionBar != null;
+        actionBar.setTitle("Intent Main");
 
         tb = findViewById(R.id.toggleButton);
         tb2 = findViewById(R.id.toggleButton2);

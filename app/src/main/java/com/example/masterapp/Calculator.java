@@ -2,6 +2,8 @@ package com.example.masterapp;
 
 import android.os.Bundle;
 import android.widget.TextView;
+
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import com.google.android.material.button.MaterialButton;
 
@@ -19,6 +21,10 @@ public class Calculator extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_calculator);
+
+        ActionBar actionBar = getSupportActionBar();
+        assert actionBar != null;
+        actionBar.setTitle("Calculator");
 
         resultTv = findViewById(R.id.result_tv);
         solutionTv = findViewById(R.id.solution_tv);

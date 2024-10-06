@@ -11,7 +11,7 @@
         android:id="@+id/linearLayout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="50dp"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
@@ -25,24 +25,18 @@
             android:layout_weight="1"
             android:text="President List" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="\t\t\t\t\t\t\t" />
-
-        <Button
+        <!--<Button
             android:id="@+id/btn_prez_details"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Details" />
+            android:text="Details" /> -->
     </LinearLayout>
 
-    <androidx.fragment.app.FragmentContainerView
+    <FrameLayout
         android:id="@+id/fragmentContainerView"
-        android:name="com.example.masterapp.PresidentList"
-        android:layout_width="309dp"
-        android:layout_height="419dp"
+        android:layout_width="300dp"
+        android:layout_height="600dp"
         android:layout_marginTop="44dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

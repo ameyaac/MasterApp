@@ -10,6 +10,7 @@ import android.widget.Spinner;
 import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
@@ -26,6 +27,10 @@ public class CustomToast extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_custom_toast);
+
+        ActionBar actionBar = getSupportActionBar();
+        assert actionBar != null;
+        actionBar.setTitle("Custom Toast");
 
         spinner = findViewById(R.id.spinner);
         ArrayAdapter arrayAdapter = ArrayAdapter.createFromResource(this, R.array.bank_names, android.R.layout.simple_spinner_item);

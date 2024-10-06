@@ -9,6 +9,7 @@ import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.annotation.Nullable;
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
@@ -34,22 +35,18 @@ public class President extends AppCompatActivity {
             return insets;
         });
 
+        ActionBar actionBar = getSupportActionBar();
+        assert actionBar != null;
+        actionBar.setTitle("President");
+
         fragmentContainer = R.id.fragmentContainerView;
 
-        prezDisp = new Fragment(R.layout.fragment_president_details);
-        prezList = new Fragment(R.layout.fragment_president_list);
-
         btn_prezList = findViewById(R.id.btn_prez_list);
-        btn_prezDetails = findViewById(R.id.btn_prez_details);
 
-        loadFragment(prezList);
-
-        btn_prezDetails.setOnClickListener(v -> {
-            loadFragment(prezDisp);
-        });
+        loadFragment(new PresidentList());
 
         btn_prezList.setOnClickListener(v -> {
-            loadFragment(prezList);
+            loadFragment(new PresidentList());
         });
 
     }

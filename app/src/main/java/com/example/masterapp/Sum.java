@@ -7,6 +7,8 @@ import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class Sum extends AppCompatActivity {
@@ -20,6 +22,11 @@ public class Sum extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sum);
+
+        ActionBar actionBar = getSupportActionBar();
+        assert actionBar != null;
+        actionBar.setTitle("Sum");
+
         field1 = findViewById(R.id.editTextNumberDecimal1);
         field2 = findViewById(R.id.editTextNumberDecimal2);
         buttonAdd = findViewById(R.id.add);

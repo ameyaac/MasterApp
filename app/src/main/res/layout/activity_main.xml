@@ -85,6 +85,44 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/menu" />
+
+            <Button
+                android:id="@+id/btn_dateTime"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Date-Time" />
+
+            <Button
+                android:id="@+id/btn_progress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Progress Bar" />
+
         </LinearLayout>
     </ScrollView>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btn_floating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="20dp"
+        android:layout_marginEnd="20dp"
+        android:src="@drawable/ic_notify"/>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:indeterminate="false"
+        android:max="100"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.174" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
