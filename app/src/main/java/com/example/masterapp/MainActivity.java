@@ -4,6 +4,7 @@ import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
+import android.os.Looper;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -36,13 +37,13 @@ public class MainActivity extends AppCompatActivity {
             , btn_custToast
             , btn_menu
             , btn_dateTime
-            , btn_progress;
+            , btn_progress
+            , btn_registration;
     FloatingActionButton btn_float;
     ProgressBar progressBar;
     private int progressBarStatus;
-    private long fileSize;
 
-    private final Handler progressBarHandler = new Handler();
+    private final Handler progressBarHandler = new Handler(Looper.getMainLooper());
 
 
     @Override
@@ -69,6 +70,7 @@ public class MainActivity extends AppCompatActivity {
         btn_menu = findViewById(R.id.btn_menu);
         btn_dateTime = findViewById(R.id.btn_dateTime);
         btn_progress = findViewById(R.id.btn_progress);
+        btn_registration = findViewById(R.id.btn_registration);
 
         btn_float = findViewById(R.id.btn_floating);
 
@@ -130,22 +132,26 @@ public class MainActivity extends AppCompatActivity {
         btn_progress.setOnClickListener(v -> {
             progressBar.setVisibility(View.VISIBLE);
             progressBarStatus = 0;
+            Random random = new Random();
 
-            new Thread(() -> {
-                while(progressBarStatus < 100) {
-                    progressBarStatus += ThreadLocalRandom.current().nextInt(20);
-                    try {
-                        Thread.sleep(ThreadLocalRandom.current().nextInt(2000));
-                    } catch (InterruptedException ie) {
-                        Log.d("Thread", "Thread Interrupted");
+            progressBarHandler.postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    if (progressBarStatus < 100) {
+                        progressBarStatus += random.nextInt(10);
+                        progressBar.setProgress(progressBarStatus);
+                        progressBarHandler.postDelayed(this, random.nextInt(1000));
+                    } else {
+                        progressBar.setVisibility(View.GONE);
+                        Toast.makeText(MainActivity.this, "Task Completed", Toast.LENGTH_SHORT).show();
                     }
-                    progressBarHandler.post(() -> progressBar.setProgress(progressBarStatus));
                 }
-                progressBarHandler.post(() -> {
-                    progressBar.setVisibility(View.GONE);
-                    Toast.makeText(MainActivity.this, "Task Completed", Toast.LENGTH_SHORT).show();
-                });
-            }).start();
+            }, 1000);
+        });
+
+        btn_registration.setOnClickListener(v -> {
+            Intent intentRegistration = new Intent(MainActivity.this, Registration.class);
+            startActivity(intentRegistration);
         });
     }
 

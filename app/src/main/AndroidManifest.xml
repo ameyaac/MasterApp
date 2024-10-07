@@ -13,24 +13,29 @@
         android:theme="@style/Theme.MasterApp"
         tools:targetApi="31">
         <activity
-            android:name=".DateTime"
+            android:name=".Registration"
             android:exported="false"
             android:parentActivityName=".MainActivity"/>
+        <activity
+            android:name=".DateTime"
+            android:exported="false"
+            android:parentActivityName=".MainActivity" />
         <activity
             android:name=".GalleryImage"
             android:exported="false"
-            android:parentActivityName=".Gallery"/>
+            android:parentActivityName=".Gallery" />
         <activity
             android:name=".Gallery"
             android:exported="false"
-            android:parentActivityName=".MainActivity"/>
+            android:parentActivityName=".MainActivity" />
         <activity
             android:name=".President"
             android:exported="false"
             android:parentActivityName=".MainActivity" />
         <activity
             android:name=".CustomToast"
-            android:exported="false" />
+            android:exported="false"
+            android:parentActivityName=".MainActivity" />
         <activity
             android:name=".IntentDisplay"
             android:exported="false"

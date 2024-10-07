@@ -98,6 +98,12 @@
                 android:layout_height="wrap_content"
                 android:text="Progress Bar" />
 
+            <Button
+                android:id="@+id/btn_registration"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Registration" />
+
         </LinearLayout>
     </ScrollView>
 
