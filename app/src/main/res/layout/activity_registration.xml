@@ -17,13 +17,33 @@
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:gravity="center">
+
+            <EditText
+                android:id="@+id/reg_no"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="number"
+                android:hint="Registration Number"
+                android:paddingStart="20dp"
+                android:background="@drawable/fragment_border"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="50px" />
+
             <EditText
                 android:id="@+id/reg_name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:ems="10"
+                android:ems="15"
                 android:inputType="text"
-                android:hint="Name"/>
+                android:hint="Name"
+                android:paddingStart="20dp"
+                android:background="@drawable/fragment_border"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="50px" />
 
             <EditText
                 android:id="@+id/reg_pwd"
@@ -31,14 +51,18 @@
                 android:layout_height="wrap_content"
                 android:ems="10"
                 android:inputType="textPassword"
-                android:hint="Password"/>
+                android:hint="Password"
+                android:paddingStart="20dp"
+                android:background="@drawable/fragment_border"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="50px" />
 
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
                 android:gravity="center"
-                android:layout_marginTop="30dp"
                 android:background="@drawable/fragment_border">
 
                 <TextView
@@ -55,13 +79,23 @@
                     android:datePickerMode="spinner" />
             </LinearLayout>
 
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="50px" />
+
             <EditText
                 android:id="@+id/reg_email"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:ems="10"
+                android:ems="15"
                 android:inputType="textEmailAddress"
-                android:hint="E-mail" />
+                android:hint="E-mail"
+                android:paddingStart="20dp"
+                android:background="@drawable/fragment_border"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="50px" />
 
             <EditText
                 android:id="@+id/reg_phone"
@@ -69,13 +103,30 @@
                 android:layout_height="wrap_content"
                 android:ems="10"
                 android:inputType="phone"
-                android:hint="Phone No." />
+                android:hint="Phone No."
+                android:paddingStart="20dp"
+                android:background="@drawable/fragment_border"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="50px" />
 
             <Spinner
                 android:id="@+id/reg_state"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"/>
+                android:background="@drawable/fragment_border"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="50px" />
+
+            <Button
+                android:id="@+id/btn_registration"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Register" />
+
         </LinearLayout>
     </ScrollView>
 

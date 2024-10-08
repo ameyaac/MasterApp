@@ -13,9 +13,12 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import java.util.List;
+
 public class Registration extends AppCompatActivity {
 
-    EditText reg_name
+    EditText reg_no
+            , reg_name
             , reg_pwd
             , reg_email
             , reg_phone;
@@ -38,6 +41,7 @@ public class Registration extends AppCompatActivity {
         assert actionBar != null;
         actionBar.setTitle("Registration");
 
+        reg_no = findViewById(R.id.reg_no);
         reg_name = findViewById(R.id.reg_name);
         reg_pwd = findViewById(R.id.reg_pwd);
         reg_dob = findViewById(R.id.reg_dob);
@@ -48,6 +52,12 @@ public class Registration extends AppCompatActivity {
         regStateAdapter = ArrayAdapter.createFromResource(this, R.array.state_names, android.R.layout.simple_spinner_item);
         regStateAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         reg_state.setAdapter(regStateAdapter);
+
+        DatabaseHandler databaseHandler = new DatabaseHandler(this);
+
+        // write code here
+
+        databaseHandler.close();
 
     }
 }
