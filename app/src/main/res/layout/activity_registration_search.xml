@@ -5,11 +5,14 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Registration">
+    tools:context=".RegistrationSearch">
 
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginTop="70dp">
 
         <LinearLayout
@@ -19,7 +22,7 @@
             android:gravity="center">
 
             <EditText
-                android:id="@+id/reg_no"
+                android:id="@+id/search_reg_no"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:ems="10"
@@ -32,116 +35,110 @@
                 android:layout_width="match_parent"
                 android:layout_height="50px" />
 
+            <Button
+                android:id="@+id/btn_search"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Search" />
+
             <EditText
-                android:id="@+id/reg_name"
+                android:id="@+id/search_reg_name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:ems="15"
                 android:inputType="text"
                 android:hint="Name"
                 android:paddingStart="20dp"
-                android:background="@drawable/fragment_border"/>
+                android:background="@drawable/fragment_border"
+                android:visibility="gone"/>
             <View
                 android:layout_width="match_parent"
                 android:layout_height="50px" />
 
             <EditText
-                android:id="@+id/reg_pwd"
+                android:id="@+id/search_reg_pwd"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:ems="10"
                 android:inputType="textPassword"
                 android:hint="Password"
                 android:paddingStart="20dp"
-                android:background="@drawable/fragment_border"/>
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="50px" />
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:gravity="center"
-                android:background="@drawable/fragment_border">
-
-                <TextView
-                    android:id="@+id/reg_dob_title"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Date of Birth" />
-
-                <DatePicker
-                    android:id="@+id/reg_dob"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:calendarViewShown="false"
-                    android:datePickerMode="spinner" />
-            </LinearLayout>
-
+                android:background="@drawable/fragment_border"
+                android:visibility="gone"/>
             <View
                 android:layout_width="match_parent"
                 android:layout_height="50px" />
 
             <EditText
-                android:id="@+id/reg_email"
+                android:id="@+id/search_reg_email"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:ems="15"
-                android:inputType="textEmailAddress"
+                android:inputType="date"
                 android:hint="E-mail"
                 android:paddingStart="20dp"
-                android:background="@drawable/fragment_border"/>
+                android:background="@drawable/fragment_border"
+                android:visibility="gone"/>
 
             <View
                 android:layout_width="match_parent"
                 android:layout_height="50px" />
 
             <EditText
-                android:id="@+id/reg_phone"
+                android:id="@+id/search_reg_dob"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textEmailAddress"
+                android:hint="Date of Birth"
+                android:paddingStart="20dp"
+                android:background="@drawable/fragment_border"
+                android:visibility="gone"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="50px" />
+
+            <EditText
+                android:id="@+id/search_reg_phone"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:ems="10"
                 android:inputType="phone"
                 android:hint="Phone No."
                 android:paddingStart="20dp"
-                android:background="@drawable/fragment_border"/>
+                android:background="@drawable/fragment_border"
+                android:visibility="gone"/>
 
             <View
                 android:layout_width="match_parent"
                 android:layout_height="50px" />
 
             <Spinner
-                android:id="@+id/reg_state"
+                android:id="@+id/search_reg_state"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="@drawable/fragment_border"/>
+                android:background="@drawable/fragment_border"
+                android:visibility="gone"/>
 
             <View
                 android:layout_width="match_parent"
                 android:layout_height="50px" />
 
             <Button
-                android:id="@+id/btn_registration"
+                android:id="@+id/btn_edit"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Register" />
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="90px" />
+                android:text="Edit"
+                android:visibility="gone"/>
 
             <Button
-                android:id="@+id/btn_search"
+                android:id="@+id/btn_delete"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Search Record Instead"
-                android:backgroundTint="@color/black"/>
-
+                android:text="Delete"
+                android:visibility="gone"/>
 
         </LinearLayout>
     </ScrollView>
-
-
-
 </androidx.constraintlayout.widget.ConstraintLayout>
