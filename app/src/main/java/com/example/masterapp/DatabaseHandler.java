@@ -77,24 +77,31 @@ public class DatabaseHandler extends SQLiteOpenHelper {
                 , null, null, null, null);
 
         if (cursor != null) {
-            cursor.moveToFirst();
+            if (cursor.moveToFirst()) {
+                // If the cursor contains a result, create the StudentRegistration object
+                StudentRegistration studentRegistration = new StudentRegistration(
+                        Integer.parseInt(cursor.getString(0))
+                        , cursor.getString(1)
+                        , cursor.getString(2)
+                        , cursor.getString(3)
+                        , cursor.getString(4)
+                        , cursor.getString(5)
+                        , cursor.getString(6)
+                );
+
+                cursor.close();  // Close the cursor
+                return studentRegistration;
+            } else {
+                // No result found, handle accordingly (e.g., return null)
+                cursor.close();  // Close the cursor
+                return null;
+            }
         }
 
-        assert cursor != null;
-        StudentRegistration studentRegistration = new StudentRegistration(
-                Integer.parseInt(cursor.getString(0))
-                , cursor.getString(1)
-                , cursor.getString(2)
-                , cursor.getString(3)
-                , cursor.getString(4)
-                , cursor.getString(5)
-                , cursor.getString(6)
-        );
-
-        cursor.close();
-
-        return studentRegistration;
+        // Return null if cursor is null (though this is unlikely)
+        return null;
     }
+
 
     // retrieving all contacts
     public List<StudentRegistration> getAllStudentRegistration() {
@@ -127,7 +134,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
     }
 
     // code to update the list based on registration number
-    public int updateStudentRegistration(StudentRegistration studentRegistration) {
+    public void updateStudentRegistration(StudentRegistration studentRegistration) {
         SQLiteDatabase database = this.getWritableDatabase();
 
         ContentValues values = new ContentValues();
@@ -141,8 +148,8 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         values.put(STATE, studentRegistration.get_state());
 
         // updating a row based on registration number
-        return database.update(TABLE_NAME, values, REG_NO + "=?"
-                , new String[] { String.valueOf(studentRegistration.get_reg_no())});
+        database.update(TABLE_NAME, values, REG_NO + "=?"
+                , new String[]{String.valueOf(studentRegistration.get_reg_no())});
     }
 
     // deleting based on registration number
