@@ -36,11 +36,12 @@
     <FrameLayout
         android:id="@+id/fragmentContainerView"
         android:layout_width="300dp"
-        android:layout_height="600dp"
+        android:layout_height="500dp"
         android:layout_marginTop="44dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/linearLayout" />
+        app:layout_constraintTop_toBottomOf="@id/linearLayout"
+        android:nestedScrollingEnabled="true"/>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
