@@ -4,8 +4,8 @@ public class StudentRegistration {
     int _reg_no;
     String _stu_name
             , _pwd
-            , _email
             , _dob
+            , _email
             , _ph_no
             , _state;
 
@@ -15,16 +15,16 @@ public class StudentRegistration {
             int _reg_no
             , String _stu_name
             , String _pwd
-            , String _email
             , String _dob
+            , String _email
             , String _ph_no
             , String _state
     ) {
         this._reg_no = _reg_no;
         this._stu_name = _stu_name;
         this._pwd = _pwd;
-        this._email = _email;
         this._dob = _dob;
+        this._email = _email;
         this._ph_no = _ph_no;
         this._state = _state;
     }
@@ -43,12 +43,12 @@ public class StudentRegistration {
         return _pwd;
     }
 
-    public String get_email() {
-        return _email;
-    }
-
     public String get_dob() {
         return _dob;
+    }
+
+    public String get_email() {
+        return _email;
     }
 
     public String get_ph_no() {
@@ -74,12 +74,12 @@ public class StudentRegistration {
         this._pwd = _pwd;
     }
 
-    public void set_email(String _email) {
-        this._email = _email;
-    }
-
     public void set_dob(String _dob) {
         this._dob = _dob;
+    }
+
+    public void set_email(String _email) {
+        this._email = _email;
     }
 
     public void set_ph_no(String _ph_no) {
